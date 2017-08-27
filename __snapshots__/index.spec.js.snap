@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lookupOne should work with default params 1`] = `
+Array [
+  Object {
+    "$lookup": Object {
+      "as": "arrayName",
+      "foreignField": "theirKey",
+      "from": "there",
+      "localField": "ourKey",
+    },
+  },
+  Object {
+    "$addFields": Object {
+      "newField": Object {
+        "$arrayElemAt": Array [
+          "$arrayName",
+          0,
+        ],
+      },
+    },
+  },
+  Object {
+    "$project": Object {
+      "arrayName": 0,
+    },
+  },
+]
+`;
